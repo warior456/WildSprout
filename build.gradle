@@ -1,0 +1,27 @@
+allprojects {
+	group = 'net.ugi.wildsprout'
+	version = '1.0.0'
+
+	repositories {
+		mavenCentral()
+		maven { url = 'https://maven.fabricmc.net/' }
+	}
+}
+
+subprojects {
+	apply plugin: 'java'
+
+	java {
+		toolchain {
+			languageVersion = JavaLanguageVersion.of(21)
+		}
+	}
+}
+
+// Task to build a merged JAR with all subproject outputs
+task fatJar(type: Jar) {
+	archiveBaseName = 'wildsprout-merged'
+	archiveVersion = version
+	from subprojects.collect { project(":${it.name}").tasks.named('jar').get().archiveFile.get().asFile }.collect { zipTree(it) }
+	with jar
+}

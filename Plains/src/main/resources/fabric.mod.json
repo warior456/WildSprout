@@ -1,0 +1,45 @@
+{
+	"schemaVersion": 1,
+	"id": "wildsprout-plains",
+	"version": "${version}",
+	"name": "WildSprout: Plains",
+	"description": "Improves the vanilla plains biome\nYou can find the config in the config folder",
+	"authors": [
+		"Matteo_fey (warior456)",
+		"gems_bond"
+	],
+	"contact": {
+		"issues": "https://github.com/warior456/WildSprout-Plains/issues",
+		"sources": "https://github.com/warior456/WildSprout-Plains"
+	},
+	"license": "WildSprout-Plains v1",
+	"icon": "assets/wildsprout-plains/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.ugi.wildsprout.WildSproutPlains"
+		],
+		"client": [
+			"net.ugi.wildsprout.WildSproutPlainsClient"
+		],
+		"fabric-datagen": [
+			"net.ugi.wildsprout.WildSproutPlainsDataGenerator"
+		]
+	},
+	"mixins": [
+		"wildsprout-plains.mixins.json",
+		{
+			"config": "wildsprout-plains.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
