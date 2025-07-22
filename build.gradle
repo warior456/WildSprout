@@ -24,7 +24,8 @@ task fatJar(type: Jar) {
 	archiveVersion = version
 	destinationDirectory = file("$buildDir/libs")
 	archiveFileName = "wildsprout-merged-${version}.jar"
-	// Explicitly add subproject JARs
+
 	def subprojectNames = ['Core', 'Plains']
+	dependsOn subprojectNames.collect { project(":$it").tasks.named('jar') }
 	from subprojectNames.collect { project(":$it").tasks.named('jar').get().archiveFile.get().asFile }.collect { zipTree(it) }
 }
