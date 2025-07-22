@@ -23,6 +23,7 @@ tasks.register('fatJar', Jar) {
 	archiveVersion = version
 	destinationDirectory = file("$buildDir/libs")
 	archiveFileName = "wildsprout-merged-${version}.jar"
+	duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 
 	def subprojectNames = ['Core', 'Plains']
 	dependsOn subprojectNames.collect { project(":$it").tasks.named('jar') }
