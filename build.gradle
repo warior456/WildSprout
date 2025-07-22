@@ -23,5 +23,5 @@ task fatJar(type: Jar) {
 	archiveBaseName = 'wildsprout-merged'
 	archiveVersion = version
 	from subprojects.collect { project(":${it.name}").tasks.named('jar').get().archiveFile.get().asFile }.collect { zipTree(it) }
-	with jar
+	// Removed: with jar
 }
