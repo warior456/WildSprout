@@ -18,8 +18,7 @@ subprojects {
 	}
 }
 
-// Task to build a merged JAR with all subproject outputs
-task fatJar(type: Jar) {
+tasks.register('fatJar', Jar) {
 	archiveBaseName = 'wildsprout-merged'
 	archiveVersion = version
 	destinationDirectory = file("$buildDir/libs")
@@ -27,5 +26,7 @@ task fatJar(type: Jar) {
 
 	def subprojectNames = ['Core', 'Plains']
 	dependsOn subprojectNames.collect { project(":$it").tasks.named('jar') }
-	from subprojectNames.collect { project(":$it").tasks.named('jar').get().archiveFile.get().asFile }.collect { zipTree(it) }
+	from subprojectNames.collect {
+		project(":$it").tasks.named('jar').get().outputs.files
+	}.collect { zipTree(it.singleFile) }
 }
