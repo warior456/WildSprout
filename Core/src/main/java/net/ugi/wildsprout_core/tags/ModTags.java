@@ -1,11 +1,12 @@
-package net.ugi.wildsprout.tags;
+package net.ugi.wildsprout_core.tags;
 
 import net.minecraft.block.Block;
 import net.minecraft.fluid.Fluid;
 import net.minecraft.item.Item;
 import net.minecraft.registry.RegistryKeys;
 import net.minecraft.registry.tag.TagKey;
-import net.ugi.wildsprout.WildSproutPlains;
+
+import net.ugi.wildsprout_core.WildSproutcore;
 
 
 public class ModTags {
@@ -31,7 +32,7 @@ public class ModTags {
                 createTag("override_snow_layer_cannot_survive_on");
 
         private static TagKey<Block> createTag(String name) {
-            return TagKey.of(RegistryKeys.BLOCK, WildSproutPlains.identifier( name));
+            return TagKey.of(RegistryKeys.BLOCK, WildSproutcore.identifier( name));
         }
     }
 
@@ -42,7 +43,7 @@ public class ModTags {
 
 
         private static TagKey<net.minecraft.world.biome.Biome> createTag(String name) {
-            return TagKey.of(RegistryKeys.BIOME, WildSproutPlains.identifier( name));
+            return TagKey.of(RegistryKeys.BIOME, WildSproutcore.identifier( name));
         }
     }
 
@@ -50,14 +51,14 @@ public class ModTags {
 
 
         private static TagKey<Item> createTag(String name) {
-            return TagKey.of(RegistryKeys.ITEM, WildSproutPlains.identifier( name));
+            return TagKey.of(RegistryKeys.ITEM, WildSproutcore.identifier( name));
         }
     }
 
     public static class Fluids {
 
         private static TagKey<Fluid> of(String name) {
-            return TagKey.of(RegistryKeys.FLUID, WildSproutPlains.identifier( name));
+            return TagKey.of(RegistryKeys.FLUID, WildSproutcore.identifier( name));
         }
     }
 

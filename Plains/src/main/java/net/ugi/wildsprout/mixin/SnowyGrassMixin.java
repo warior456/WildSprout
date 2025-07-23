@@ -7,7 +7,6 @@ import net.minecraft.block.SpreadableBlock;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.WorldView;
 import net.ugi.wildsprout.WildSproutPlains;
-import net.ugi.wildsprout.tags.ModTags;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;

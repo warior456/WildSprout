@@ -1,4 +1,4 @@
-package net.ugi.wildsprout.world.gen.feature;
+package net.ugi.wildsprout_core.world.gen.feature;
 
 import com.mojang.serialization.Codec;
 import net.minecraft.block.*;

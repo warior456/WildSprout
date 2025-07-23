@@ -12,7 +12,7 @@ import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.placementmodifier.BlockFilterPlacementModifier;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
 import net.ugi.wildsprout.WildSproutPlains;
-import net.ugi.wildsprout.tags.ModTags;
+import net.ugi.wildsprout_core.tags.ModTags;
 
 public class ModConfiguredFeatures {
     //-------------------------

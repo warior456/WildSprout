@@ -1,4 +1,4 @@
-package net.ugi.wildsprout.world.gen.feature;
+package net.ugi.wildsprout_core.world.gen.feature;
 
 import com.mojang.serialization.Codec;
 import net.minecraft.block.Blocks;
@@ -13,7 +13,7 @@ import net.minecraft.world.StructureWorldAccess;
 import net.minecraft.world.gen.feature.DefaultFeatureConfig;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.util.FeatureContext;
-import net.ugi.wildsprout.tags.ModTags;
+import net.ugi.wildsprout_core.tags.ModTags;
 
 public class WheatPatch extends Feature<DefaultFeatureConfig> {
 

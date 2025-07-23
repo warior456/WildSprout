@@ -6,7 +6,7 @@ import net.minecraft.world.gen.feature.DefaultFeatureConfig;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.RandomPatchFeatureConfig;
 import net.ugi.wildsprout.WildSproutPlains;
-import net.ugi.wildsprout.world.gen.feature.*;
+import net.ugi.wildsprout_core.world.gen.feature.*;
 
 public class ModFeatures {
     public static final Feature<DefaultFeatureConfig> BOULDERS = new Boulders(DefaultFeatureConfig.CODEC);

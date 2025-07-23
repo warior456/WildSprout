@@ -5,8 +5,10 @@ import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
 import net.ugi.wildsprout.config.Config;
 import net.ugi.wildsprout.config.ConfigHandler;
+import net.ugi.wildsprout.config.PlainsConfigImpl;
 import net.ugi.wildsprout.world.gen.*;
 import net.ugi.wildsprout_core.WildSproutcore;
+import net.ugi.wildsprout_core.api.PlainsConfigAPI;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -32,6 +34,7 @@ public class WildSproutPlains implements ModInitializer {
 		LOGGER.info("Hello Fabric world!");
 		WildSproutPlains.LOGGER.info("Loading Config for " + WildSproutPlains.MOD_ID);
 		Config.loadConfig();
+		PlainsConfigAPI.provider = new PlainsConfigImpl();
 		ModFeatures.init();
 		ModStructureTypes.init();
 		ModStructurePieceTypes.init();

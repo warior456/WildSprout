@@ -5,7 +5,7 @@ import net.minecraft.block.SnowBlock;
 import net.minecraft.world.WorldView;
 import net.minecraft.util.math.BlockPos;
 import net.ugi.wildsprout.WildSproutPlains;
-import net.ugi.wildsprout.tags.ModTags;
+import net.ugi.wildsprout_core.tags.ModTags;
 import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;

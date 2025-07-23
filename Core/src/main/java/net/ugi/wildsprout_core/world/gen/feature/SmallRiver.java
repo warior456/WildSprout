@@ -1,4 +1,4 @@
-package net.ugi.wildsprout.world.gen.feature;
+package net.ugi.wildsprout_core.world.gen.feature;
 
 import com.mojang.serialization.Codec;
 import net.minecraft.block.Blocks;
@@ -16,14 +16,14 @@ import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.DefaultFeatureConfig;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.util.FeatureContext;
-import net.ugi.wildsprout.world.gen.ModFeatures;
+
 
 import java.util.Optional;
 
 public class SmallRiver extends Feature<DefaultFeatureConfig> {
 
-    public static final ConfiguredFeature<?, ?> SMALL_RIVER_CONFIGURED = new ConfiguredFeature<>(
-            ModFeatures.SMALL_RIVER,
+/*    public static final ConfiguredFeature<?, ?> SMALL_RIVER_CONFIGURED = new ConfiguredFeature<>(
+            Feature.RANDOM_PATCH,
             new DefaultFeatureConfig()
     );
     public static boolean generateAt(StructureWorldAccess world, ChunkGenerator chunkGenerator, BlockPos pos) {
@@ -37,7 +37,7 @@ public class SmallRiver extends Feature<DefaultFeatureConfig> {
                 new DefaultFeatureConfig()
         );
         return feature.generate(context);
-    }
+    }*/
 
     public SmallRiver(Codec<DefaultFeatureConfig> configCodec) {
         super(configCodec);
