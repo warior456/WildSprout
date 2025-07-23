@@ -6,6 +6,7 @@ import net.minecraft.util.Identifier;
 import net.ugi.wildsprout.config.Config;
 import net.ugi.wildsprout.config.ConfigHandler;
 import net.ugi.wildsprout.world.gen.*;
+import net.ugi.wildsprout_core.WildSproutcore;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

@@ -1,6 +1,6 @@
 allprojects {
 	group = 'net.ugi.wildsprout'
-	version = '1.0.0'
+	version = wildsprout_version
 
 	repositories {
 		mavenCentral()
@@ -18,11 +18,12 @@ subprojects {
 	}
 }
 
-tasks.register('fatJar', Jar) {
-	archiveBaseName = 'wildsprout-merged'
+
+tasks.register('wildSproutJar', Jar) {
+	archiveBaseName = 'WildSprout'
 	archiveVersion = version
 	destinationDirectory = file("$buildDir/libs")
-	archiveFileName = "wildsprout-merged-${version}.jar"
+	archiveFileName = "WildSprout.jar"
 	duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 
 	def subprojectNames = ['Core', 'Plains']

@@ -8,4 +8,6 @@ pluginManagement {
 		gradlePluginPortal()
 	}
 }
-include 'Core', 'Plains'
+rootProject.name = "WildSprout"
+include 'Core'
+include 'Plains'
